@@ -1,0 +1,34 @@
+fopen(fname, "w+")
+freopen(fname, "w+", fp)
+fclose(fp)
+
+fgetc(fp)
+fputc('\n', fp)
+fgets(array, sizeof(array), fp)
+fputs(string, fp)
+fprintf(fp, "%d", i)
+fscanf(fp, "%d", &i)
+fread(buffer, size, count, fp)
+fwrite(buffer, size, count, fp)
+
+feof(fp)
+rewind(fp)
+ftell(fp)
+fseek(fp, i, SEEK_CUR)
+
+fflush(fp)
+remove()
+rename()
+tmpfile()
+mktemp(fname) 产生唯一的临时文件名
+int fileno(fp) 返回文件流所使用的文件描述词
+fdopen(int, "w+") 将文件描述词转为文件指针
+
+setbuf(fp, buffer) 设置文件流的缓冲区
+setbuffer(fp, buffer, sizeof(buffer)) 设置文件流的缓冲区
+setlinebuf(fp) 设置文件流为线性缓冲区
+setvbuf(fp, buffer, int_mode, sizeof(buffer)) 设置文件流的缓冲区
+ungetc(int_char, fp)
+
+ferror(fp)
+clearerr(fp)

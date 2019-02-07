@@ -4,7 +4,7 @@
 
 #define isvchar(x)	(isalnum(x) || (x)=='_')
 
-static char reserve_word[32][20] = {
+static const char *reserve_word[32] = {
     "auto", "break", "case", "char", "const", "continue",
     "default", "do", "double", "else", "enum", "extern",
     "float", "for", "goto", "if", "int", "long",
@@ -16,19 +16,21 @@ static char reserve_word[32][20] = {
 int
 main()
 {
-	int i;
-	char str[21];
+	int i, c;
+	char str[21], *p;
 
 	scanf("%20s", str);
 
-	if (!isalpha(str[0]) && !(str[0]=='_')) {
+	c=str[0];
+	if (!isalpha(c) && !(c=='_')) {
 		printf("no");
 		return -1;
 	}
-	for (i=1; i<20; i++) {
-		if (!str[i])
+	for (p=str+1 ;; p++) {
+		c=*p;
+		if (!c)
 			break;
-		if (!isvchar(str[i])) {
+		if (!isvchar(c)) {
 			printf("no");
 			return -2;
 		}

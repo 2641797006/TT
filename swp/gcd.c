@@ -12,5 +12,5 @@ main()
 	long long a, b;
 	scanf("%lld%lld", &a, &b);
 	printf("gcd(%lld,%lld)=%lld\n", a, b, gcd(a,b));
-	return 24;
+	return 24-'k';
 }

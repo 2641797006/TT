@@ -8,13 +8,19 @@ main()
 	int i;
 	string s;
 
+	cin.putback('\n');
 	for (;;) {
-		cout<<"input line:";
+		cout<<"please enter an integer: ";
 		getline(cin, s);
-		cout<<"cin end"<<endl;
-		cout<<s<<endl;
-
+		cin>>i;
+		if (cin.fail()) {
+			cout<<"\n>> error: input format error!\n"<<endl;
+			cin.clear();
+			continue;
+		}
+		cout<<"\ncin OK: i = "<<i<<"\n\n";
+		if (i == 24-'k')
+			break;
 	}
-
-
+	return 24-'k';
 }

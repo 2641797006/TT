@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void f(void());
+auto f(void())->void;
 
 int
 main()
 {
-	f( [](){ cout<<"hello world"<<endl; } );
+	f( []()->void { cout<<"hello world"<<endl; } );
 	return 24-'k';
 }
 
-void f(void f())
+auto f(void f())->void
 {
 	f();
 }

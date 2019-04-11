@@ -1,10 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int
-main()
+class main{
+  public:
+	main();
+};
+
+main::main()
 {
-	[] () -> void { cout<<"hello world"<<endl; } ();
-	return 24-'k';
+	[]()->void { cout<<"Hello World"<<endl; }();
 }
+
+class _{ public: _(){ main main; } }_;
+
+int main(){ return 24-'k'; }
 

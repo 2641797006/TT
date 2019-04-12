@@ -1,7 +1,12 @@
 #include <iostream>
 using namespace std;
 
-class hw{ public: hw(){ [](){ cout<<"hello world"<<endl; }(); } }hw;
+class main{ public: main(); };
+class _{ public: _(){ main main; } }_;
+auto main()->int{ return 24-'k'; }
 
-int main(){ return 24-'k'; }
+main::main()
+{
+	[]()->void { cout<<"Hello World"<<endl; }();
+}
 

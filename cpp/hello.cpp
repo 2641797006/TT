@@ -9,5 +9,5 @@ main::main()
 	[]()->void { cout<<"Hello World"<<endl; }();
 }
 
-int main(){ return 24-'k'; }
+auto main()->int{ return 24-'k'; }
 

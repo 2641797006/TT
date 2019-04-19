@@ -6,7 +6,6 @@ class _{ ::main main; }_;
 auto main()->int{ return 24-'k'; }
 
 using namespace std;
-
 class Point{
   public:
 	// 原点坐标
@@ -14,7 +13,7 @@ class Point{
 	// 半径
 	double radius;
 	// 当前点坐标
-	double cx, cy;
+	float cx, cy;
 	// 当前角度
 	double current_angle;
 
@@ -35,12 +34,12 @@ class Point{
 	}
 
 	void set_angle(double angle) {
-		current_angle = deg_to_rad(angle);
+		current_angle = - deg_to_rad(angle);
 		next(0);
 	}
 
 	void next(double angle) {
-		current_angle += deg_to_rad(angle);
+		current_angle -= deg_to_rad(angle);
 		cx = ox + radius * cos(current_angle);
 		cy = oy + radius * sin(current_angle);
 		zero_fix();
@@ -67,7 +66,7 @@ main::main()
 
 	int i;
 	for (i=0; i<3; ++i) {
-		cout<<'('<<P.cx<<','<<P.cy<<')'<<'\n';
+		cout<<'('<<(int)P.cx<<','<<(int)P.cy<<')'<<'\n';
 // 旋转120度得到下一个点坐标
 		P.next(120);
 	}

@@ -20,8 +20,7 @@ class Point{
 
 	Point(double x, double y, double r): ox(x), oy(y), radius(r), current_angle(0){}
 
-
-	void setXY(double x, double y) {
+	void set_xy(double x, double y) {
 		double dx, dy, len, as, ac;
 		dy = y - oy;
 		dx = x - ox;
@@ -62,7 +61,7 @@ main::main()
 	Point P(0, 0, 100);
 
 // 设置初始点坐标 (初始点仅代表方向, 可以不在圆上)
-//	P.setXY(0,100);
+//	P.set_xy(0,100);
 // 或者设置初始角度
 	P.set_angle(90);
 

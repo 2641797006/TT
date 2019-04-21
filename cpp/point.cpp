@@ -51,10 +51,10 @@ class Point{
 	double deg_to_rad(double angle) { return angle/180.0*M_PI; }
 
 	int dtoi(double d) {
-		int i = (int)d;
-		if (abs(d-i) >= 0.5)
-			i += d>0 ? 1 : -1;
-		return i;
+//		int i = (int)d;
+//		if (abs(d-i) >= 0.5)
+//			i += d>0 ? 1 : -1;
+		return d+0.5;
 	}
 };
 

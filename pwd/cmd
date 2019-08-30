@@ -1,0 +1,1 @@
+gcc 002.c -o 002 -L/home/cpplay/git/lib_c/lib -lprand -L/home/cpplay/c/pwd/c -lpwd

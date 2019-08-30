@@ -23,3 +23,4 @@ void set_line(char *line);
 void get_token(Token *token);
 
 #endif
+

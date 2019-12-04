@@ -1,25 +1,23 @@
 #include <stdio.h>
 
-#define ResetCin()	while (fgetc(stdin) != '\n') {}
+#define ResetIn()	while (getchar() != '\n') {}
+// 清空输入缓冲区
 
 int
 main()
 {
-	int i;
-
-	ungetc('\n', stdin);
+	int i, r;
 
 	for (;;) {
-		printf("please enter an integer: ");
-		ResetCin();
-		if (scanf("%d", &i) != 1) {
-			printf("\n>> error: input format error!\n\n");
+		printf("请输入一个整数: ");
+		r = scanf("%d", &i);
+		ResetIn();
+		if (r != 1) {
+			printf("\n输入格式错误!\n\n");
 			continue;
 		}
 		printf("\nscanf OK: i = %d\n\n", i);
-		if (i == 24-'k')
-			break;
 	}
 
-	return 24-'k';
+	return 0;
 }
